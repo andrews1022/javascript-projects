@@ -1,39 +1,26 @@
-function getJokes(e) {
-  // Prevent default behavior
-  e.preventDefault();
+const jokesList = document.getElementById('jokes');
+const numberInput = document.getElementById('number');
+const getJokesButton = document.getElementById('get-jokes');
 
-  // Get input amount
-  const number = document.querySelector('input[type="number"]').value;
+const getJokes = async (e) => {
+  try {
+    e.preventDefault();
 
-  // Create new xhr variable, and fetch data from api based on number selected
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);
+    const numberOfJokesToFetch = +numberInput.value;
+    const response = await fetch(`http://api.icndb.com/jokes/random/${numberOfJokesToFetch}`);
+    const jokes = await response.json();
+    let htmlOutput = '';
 
-  xhr.onload = function () {
-    // Check for 200 status
-    if (this.status === 200) {
-      // Make sure to parse the JSON string into an array of objects which we can then interact with
-      const response = JSON.parse(this.responseText);
-
-      // Initalize an output variable
-      let output = '';
-
-      // Check if type is success
-      if (response.type === 'success') {
-        // If successful, loop through append each joke to the DOM
-        response.value.forEach(function (joke) {
-          output += `<li>${joke.joke}</li>`;
-        });
-      } else {
-        output += '<li>Something went wrong</li>';
-      }
-
-      // Take the output and insert into the ul element
-      document.querySelector('.jokes').innerHTML = output;
+    if (jokes) {
+      jokes.value.forEach((joke) => {
+        htmlOutput += `<li>${joke.joke}</li>`;
+      });
     }
+
+    jokesList.innerHTML = htmlOutput;
+  } catch (error) {
+    console.log(`Your error: ${error}`);
   }
+};
 
-  xhr.send();
-}
-
-document.querySelector('.get-jokes').addEventListener('click', getJokes);
+getJokesButton.addEventListener('click', getJokes);

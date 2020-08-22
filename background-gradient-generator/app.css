@@ -1,40 +1,44 @@
-body {
+.gradient {
   background: linear-gradient(to right, rgb(0, 255, 0), rgb(255, 0, 0));
   color: #222;
   letter-spacing: 0.5em;
   text-align: center;
   text-transform: uppercase;
-  top: 15%;
+}
+
+.wrapper {
+  background-color: #eee;
+  border-radius: 1rem;
+  box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  padding: 1.5rem 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: #222;
+  text-align: center;
 }
 
 h1 {
-  color: #222;
   font: 600 2.5em 'Montserrat', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
 }
 
 h2 {
-  color: #222;
   font: 600 1.25em 'Montserrat', sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
 }
 
 h3 {
-  color: #222;
   font: 900 1em 'Montserrat', sans-serif;
   letter-spacing: 0.01em;
-  text-align: center;
   text-transform: none;
 }
 
 .random {
   background-color: transparent;
-  border: 5px solid #222;
-  border-radius: 50px;
+  border: 0.25rem solid #222;
+  border-radius: 4rem;
   cursor: pointer;
   font: 600 1em 'Montserrat', sans-serif;
   margin: 2em auto;

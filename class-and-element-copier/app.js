@@ -1,28 +1,19 @@
 // ---------- UI Variables ----------
 const formChecks = document.querySelectorAll('.form__check');
-
-const classInput = document.querySelector('#classInput');
-const bothInput = document.querySelector('#bothInput');
-
+const classInput = document.getElementById('classInput');
+const bothInput = document.getElementById('bothInput');
 const generateBtns = document.querySelectorAll('.btn--generate');
-
-const classEntry = document.querySelector('#classEntry');
-const bothClassEntry = document.querySelector('#bothClassEntry');
-const bothElementEntry = document.querySelector('#bothElementEntry');
-
-const classOutput = document.querySelector('#classOutput');
-const bothOutput = document.querySelector('#bothOutput');
+const classEntry = document.getElementById('classEntry');
+const bothClassEntry = document.getElementById('bothClassEntry');
+const bothElementEntry = document.getElementById('bothElementEntry');
+const classOutput = document.getElementById('classOutput');
+const bothOutput = document.getElementById('bothOutput');
 
 // Function to display/hide inputs
-function displayInput(el) {
-  if (el.classList.contains('hide')) {
-    el.classList.remove('hide');
-    el.classList.add('show');
-  } else {
-    el.classList.remove('show');
-    el.classList.add('hide');
-  }
-}
+const displayInput = (el) => {
+  el.classList.toggle('show');
+  el.classList.toggle('hide');
+};
 
 // Handle which check box is clicked
 formChecks.forEach((check) => {
@@ -86,9 +77,7 @@ generateBtns.forEach((btn) => {
           const elementsArray = arr[1]; // Assign all elements entered
 
           // Create a results array, taking each element, and creating an array with it with each class name
-          const results = elementsArray.map((el) => {
-            return [el, classesArray];
-          });
+          const results = elementsArray.map((el) => [el, classesArray]);
 
           // For each pair...
           results.forEach((res) => {
@@ -111,8 +100,6 @@ generateBtns.forEach((btn) => {
           });
         });
       }
-    } else {
-      console.log('Something went wrong here');
     }
   });
 });

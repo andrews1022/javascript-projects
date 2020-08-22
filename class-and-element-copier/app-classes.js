@@ -1,3 +1,5 @@
+// This uses a Class based approach
+
 class Copyier {
   constructor() {
     // Set UI Variables
