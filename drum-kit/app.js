@@ -8,9 +8,9 @@ const crash = new Audio('sounds/crash.mp3');
 const kick = new Audio('sounds/kick-bass.mp3');
 
 // Determine number of drum buttons
-const numberOfDrumButtons = document.querySelectorAll('.drum').length;
+const drumButtons = document.querySelectorAll('.drum');
 
-function makeSound(key) {
+const makeSound = (key) => {
   // Switch statement for drum sounds - play the sound according to case/inner html of button clicked
   switch (key) {
     case 'w':
@@ -44,33 +44,28 @@ function makeSound(key) {
     default:
       break;
   }
-}
+};
 
-function buttonAnimation(currentKey) {
+const buttonAnimation = (currentKey) => {
   const activeButton = document.querySelector(`.${currentKey}`);
   activeButton.classList.add('pressed');
 
   setTimeout(() => {
     activeButton.classList.remove('pressed');
   }, 100);
-}
+};
 
 // Event listener for keyboard input
-document.addEventListener('keydown', function keyListen(event) {
-  makeSound(event.key);
-
-  buttonAnimation(event.key);
+document.addEventListener('keydown', (e) => {
+  makeSound(e.key);
+  buttonAnimation(e.key);
 });
 
 // Loop through each button with a class name of 'drum' and add an event listener when clicked
-for (let i = 0; i < numberOfDrumButtons; i++) {
-  // eslint-disable-next-line prettier/prettier
-  document.querySelectorAll('.drum')[i].addEventListener('click', function drumLoop() {
-      // Define letiable for innerHTML of each button
-      const buttonInnerHTML = this.innerHTML;
-
-      makeSound(buttonInnerHTML);
-
-      buttonAnimation(buttonInnerHTML);
-    });
-}
+drumButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const buttonInnerHTML = button.innerHTML;
+    makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
+  });
+});

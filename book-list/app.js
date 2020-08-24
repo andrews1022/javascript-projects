@@ -1,4 +1,4 @@
-// Global UI element variables
+// UI Element Variables
 const bookForm = document.getElementById('book-form');
 const bookList = document.getElementById('book-list');
 const container = document.querySelector('.container');

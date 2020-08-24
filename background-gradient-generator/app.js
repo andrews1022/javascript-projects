@@ -1,3 +1,4 @@
+// UI Element Variables
 const cssOutput = document.querySelector('.css-output');
 const colorOne = document.querySelector('.color1');
 const colorTwo = document.querySelector('.color2');

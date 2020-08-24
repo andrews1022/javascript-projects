@@ -36,27 +36,16 @@ class UI {
   }
 
   // Show alert message
-  showAlert(message, className){
-    // Clear any remaining alerts
-    this.clearAlert();
+  showAlert(message, className) {
+    this.clearAlert(); // Clear any remaining alerts
 
-    // Create a div
-    const div = document.createElement('div');
+    const div = document.createElement('div'); // Create a div
+    div.className = className; // Add classes
+    div.appendChild(document.createTextNode(message)); // Add the text
 
-    // Add classes
-    div.className = className;
-
-    // Add the text
-    div.appendChild(document.createTextNode(message));
-
-    // Get parent
-    const container = document.querySelector('.searchContainer');
-
-    // Get the search box
-    const search = document.querySelector('.search');
-
-    // Insert the alert
-    container.insertBefore(div, search);
+    const container = document.querySelector('.searchContainer'); // Get parent
+    const search = document.querySelector('.search'); // Get the search box
+    container.insertBefore(div, search); // Insert the alert
 
     // Remove after 3 seconds
     setTimeout(() => {
@@ -66,11 +55,11 @@ class UI {
   }
 
   // Show user repos
-  showRepos(repos){
+  showRepos(repos) {
     let output = '';
 
     // Loop through the repos
-    repos.forEach(repo => {
+    repos.forEach((repo) => {
       output += `
         <div class="card card-body mb-2">
           <div class="row">
@@ -92,18 +81,18 @@ class UI {
   }
 
   // Clear alert message
-  clearAlert(){
+  clearAlert() {
     // Grab current alert message
     const currentAlert = document.querySelector('.alert');
 
     // Check to see if there is one
     if (currentAlert) {
-     currentAlert.remove(); 
+      currentAlert.remove();
     }
   }
 
   // Clear profile on empty input
-  clearProfile(){
+  clearProfile() {
     this.profile.innerHTML = '';
   }
 }

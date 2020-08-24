@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.65rem;
+  text-align: center;
+}
+
+h2 {
+  background-color: gold;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+a {
+  color: #000;
+  display: block;
+  margin: 1rem;
+  text-decoration: none;
+  transition: all 175ms ease-in-out;
+}
+
+a:hover {
+  color: red;
+}
+
+hr {
+  height: 0.75rem;
+  width: 60%;
+  background-color: #8b008b;
+  margin: 3.25rem auto;
+}
+
+#double {
+  background-color: #009e9e;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 175ms ease-in-out;
+}
+
+#double:hover {
+  background-color: #008686;
+}

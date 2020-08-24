@@ -1,4 +1,4 @@
-// ---------- UI Variables ----------
+// UI Element Variables
 const formChecks = document.querySelectorAll('.form__check');
 const classInput = document.getElementById('classInput');
 const bothInput = document.getElementById('bothInput');
@@ -105,7 +105,7 @@ generateBtns.forEach((btn) => {
 });
 
 // Copy text & delete list item function
-async function copyAndDelete(e) {
+const copyAndDelete = async (e) => {
   if (e.target.classList.contains('btn--copy')) {
     if (navigator.clipboard) {
       e.preventDefault();
@@ -131,7 +131,7 @@ async function copyAndDelete(e) {
   } else {
     console.log('Something went wrong here...');
   }
-}
+};
 
 // Listen for click on edit
 classOutput.addEventListener('click', copyAndDelete);

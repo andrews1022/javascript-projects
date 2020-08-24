@@ -1,4 +1,4 @@
-// Grab DOM Elements
+// UI Element Variables
 const searchBox = document.querySelector('#search');
 const matchList = document.querySelector('#match-list');
 

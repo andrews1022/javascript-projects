@@ -1,4 +1,4 @@
-// Grab elements
+// UI Element Variables
 const contentDiv = document.getElementById('content');
 const navLinks = Array.from(document.querySelectorAll('.link'));
 

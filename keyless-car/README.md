@@ -1,8 +1,3 @@
-# Keyless Card
+# Keyless Car
 
-This was built alongside Andrei Neagoie as part of his [The Complete Web Developer in 2019: Zero to Mastery Udemy Course](https://www.udemy.com/the-complete-web-developer-zero-to-mastery/)
-
-### Things I learned building this project
-- Basic variable assignment
-- Using Number() to return the value inputted by the user as a number because by default prompt() returns that value as a string
-- Constructing a basic conditional statement using if and else if
+This project was built as a part of Andrei Neagoie's [The Complete Web Developer in 2020: Zero to Mastery](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/) Udemy course.
