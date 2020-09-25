@@ -1,0 +1,76 @@
+body {
+  padding: 1.25rem 0;
+}
+
+.header,
+.marketing,
+.footer {
+  padding: 0 1rem;
+}
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1.25rem;
+}
+
+.header h3 {
+  margin: 0;
+  line-height: 2.5rem;
+}
+
+.footer {
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.25rem;
+}
+
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+.jumbotron {
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.jumbotron .btn {
+  font-size: 1.25rem;
+  padding: 0.875rem 1.5rem;
+}
+
+.marketing {
+  margin: 2.5rem 0;
+}
+
+.marketing p + h4 {
+  margin-top: 1.75rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+}
+
+.card > * {
+  margin-right: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 45.5rem;
+  }
+
+  .header,
+  .marketing,
+  .footer {
+    padding: 0;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
