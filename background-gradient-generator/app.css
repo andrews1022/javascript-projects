@@ -1,59 +1,59 @@
 .gradient {
-  background: linear-gradient(to right, rgb(0, 255, 0), rgb(255, 0, 0));
-  color: #222;
-  letter-spacing: 0.5em;
-  text-align: center;
-  text-transform: uppercase;
+	background: linear-gradient(to right, rgb(0, 255, 0), rgb(255, 0, 0));
+	color: #222;
+	letter-spacing: 0.5em;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .wrapper {
-  background-color: #eee;
-  border-radius: 1rem;
-  box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.15);
-  display: inline-block;
-  padding: 1.5rem 2rem;
+	background-color: #eee;
+	border-radius: 1rem;
+	box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.15);
+	display: inline-block;
+	padding: 1.5rem 2rem;
 }
 
 h1,
 h2,
 h3 {
-  color: #222;
-  text-align: center;
+	color: #222;
+	text-align: center;
 }
 
 h1 {
-  font: 600 2.5em 'Montserrat', sans-serif;
+	font: 600 2.5em 'Montserrat', sans-serif;
 }
 
 h2 {
-  font: 600 1.25em 'Montserrat', sans-serif;
+	font: 600 1.25em 'Montserrat', sans-serif;
 }
 
 h3 {
-  font: 900 1em 'Montserrat', sans-serif;
-  letter-spacing: 0.01em;
-  text-transform: none;
+	font: 900 1em 'Montserrat', sans-serif;
+	letter-spacing: 0.01em;
+	text-transform: none;
 }
 
 .random {
-  background-color: transparent;
-  border: 0.25rem solid #222;
-  border-radius: 4rem;
-  cursor: pointer;
-  font: 600 1em 'Montserrat', sans-serif;
-  margin: 2em auto;
-  outline: none;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  transition: ease-in-out 200ms;
+	background-color: transparent;
+	border: 0.25rem solid #222;
+	border-radius: 4rem;
+	cursor: pointer;
+	font: 600 1em 'Montserrat', sans-serif;
+	margin: 2em auto;
+	outline: none;
+	padding: 0.5rem 1rem;
+	text-align: center;
+	transition: ease-in-out 200ms;
 }
 
 .random:hover {
-  color: #eee;
-  background-color: #222;
+	color: #eee;
+	background-color: #222;
 }
 
 [type='color'] {
-  background-color: #222;
-  border: none;
+	background-color: #222;
+	border: none;
 }

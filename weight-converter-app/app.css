@@ -1,21 +1,21 @@
 body {
-  background-color: #333;
-  color: #f3f3f3;
+	background-color: #333;
+	color: #f3f3f3;
 }
 
 .main-heading {
-  margin: 4.5rem 0 2rem 0;
+	margin: 4.5rem 0 2rem 0;
 }
 
 .card {
-  margin-bottom: 15px;
-  padding: 1rem 2.5rem;
+	margin-bottom: 15px;
+	padding: 1rem 2.5rem;
 }
 
 #output {
-  display: none;
+	display: none;
 }
 
 #output.visible {
-  display: block;
+	display: block;
 }
