@@ -1,84 +1,84 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,400&display=swap');
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
-	margin: 0;
-	padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background: #333 url('./vancouver.jpg') no-repeat center center / cover;
-	color: #ccc;
-	font-family: 'Raleway', sans-serif;
-	height: 100vh;
-	overflow: hidden;
+  background: #333 url('./vancouver.jpg') no-repeat center center / cover;
+  color: #ccc;
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  overflow: hidden;
 }
 
 img {
-	display: block;
-	height: auto;
-	max-width: 100%;
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 h1,
 h2 {
-	font-weight: 200;
-	margin: 0.5rem;
+  font-weight: 200;
+  margin: 0.5rem;
 }
 
 h1 {
-	font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-	color: #aaa;
-	font-size: 2rem;
+  color: #aaa;
+  font-size: 2rem;
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 35%;
-	padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 35%;
+  padding: 0 3rem;
 }
 
 /* Cursor Effect */
 .txt-type > .txt {
-	border-right: 0.2rem solid #aaa;
+  border-right: 0.2rem solid #aaa;
 }
 
 @media (min-width: 1200px) {
-	h1 {
-		font-size: 4.5rem;
-	}
+  h1 {
+    font-size: 4.5rem;
+  }
 }
 
 @media (max-width: 800px) {
-	h1 {
-		font-size: 3rem;
-	}
-	h2 {
-		font-size: 1.75rem;
-	}
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
 
-	.container {
-		padding: 0 1.5rem;
-	}
+  .container {
+    padding: 0 1.5rem;
+  }
 }
 
 @media (max-width: 500px) {
-	h1 {
-		font-size: 2.5rem;
-	}
+  h1 {
+    font-size: 2.5rem;
+  }
 
-	h2 {
-		font-size: 1.5rem;
-	}
+  h2 {
+    font-size: 1.5rem;
+  }
 }

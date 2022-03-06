@@ -1,16 +1,13 @@
-import {
-  http
-} from './http';
-import {
-  ui
-} from './ui';
+import { http } from './http';
+import { ui } from './ui';
 
 // Get posts
 function getPosts() {
   // Get posts from fake rest api running on json-server
-  http.get('http://localhost:3000/posts')
-    .then(data => ui.showPosts(data))
-    .catch(error => console.log(error));
+  http
+    .get('http://localhost:3000/posts')
+    .then((data) => ui.showPosts(data))
+    .catch((error) => console.log(error));
 }
 
 // Add posts
@@ -26,34 +23,36 @@ function submitPost() {
   const data = {
     title,
     body
-  }
+  };
 
   // Validate input - make sure inputs have something entered
   if (title === '' || body === '') {
-    ui.showAlert('Please fill in the form', 'alert alert-danger')
+    ui.showAlert('Please fill in the form', 'alert alert-danger');
   } else {
     // Check form ID
     if (id === '') {
       // Add/create post
       // Make post request - Create post
-      http.post('http://localhost:3000/posts', data)
-        .then(data => {
+      http
+        .post('http://localhost:3000/posts', data)
+        .then((data) => {
           ui.showAlert('Post Added!', 'alert alert-success');
           ui.clearFields();
           // Once we add the post, we want to see it added on the page, so we need to call getPosts() again
           // This will get the posts including the new one we just added
           getPosts();
         })
-        .catch(error => console.log(error))
+        .catch((error) => console.log(error));
     } else {
       // Update the post - PUT request
-      http.put(`http://localhost:3000/posts/${id}`, data)
-        .then(data => {
+      http
+        .put(`http://localhost:3000/posts/${id}`, data)
+        .then((data) => {
           ui.showAlert('Post Updated!', 'alert alert-success');
           ui.changeFormState('add');
           getPosts();
         })
-        .catch(error => console.log(error))
+        .catch((error) => console.log(error));
     }
   }
 }
@@ -71,16 +70,16 @@ function deletePost(e) {
     if (confirm('Are you sure?')) {
       // If they are, we will make our request using our http.delete method
       // Delete the post with the matching id#
-      http.delete(`http://localhost:3000/posts/${id}`)
-        .then(data => {
+      http
+        .delete(`http://localhost:3000/posts/${id}`)
+        .then((data) => {
           // Show an alert message
           ui.showAlert('Post Removed', 'alert alert-success');
 
           // Get posts
           getPosts();
         })
-        .catch(error => console.log(error));
-
+        .catch((error) => console.log(error));
     }
   }
 }
@@ -100,10 +99,10 @@ function enableEdit(e) {
       id,
       title,
       body
-    }
+    };
 
     // Fill the form with the current post using data variable
-    ui.fillForm(data)
+    ui.fillForm(data);
   }
 }
 

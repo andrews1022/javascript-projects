@@ -25,9 +25,9 @@ class EasyHTTP {
       fetch(url, {
         method: 'POST',
         headers: {
-          'Content-type': 'application/json',
+          'Content-type': 'application/json'
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
       })
         .then((resp) => resp.json())
         .then((data) => res(data))
@@ -41,9 +41,9 @@ class EasyHTTP {
       fetch(url, {
         method: 'PUT',
         headers: {
-          'Content-type': 'application/json',
+          'Content-type': 'application/json'
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(data)
       })
         .then((resp) => resp.json())
         .then((data) => res(data))
@@ -57,8 +57,8 @@ class EasyHTTP {
       fetch(url, {
         method: 'DELETE',
         headers: {
-          'Content-type': 'application/json',
-        },
+          'Content-type': 'application/json'
+        }
       })
         .then((resp) => resp.json())
         .then(() => res('Resource Deleted'))

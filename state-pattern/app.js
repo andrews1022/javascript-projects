@@ -2,21 +2,21 @@
 // It sort of how state managers like Redux work
 // We have a state that we can change it throughout our script so if we want to do certain things on certain states or display certain content we can do that
 
-const PageState = function() {
+const PageState = function () {
   let currentState = new homeState(this); // this pertains to the function itself
 
   // Init method - set initial page to home state
-  this.init = function() {
-    this.change(new homeState);
-  }
+  this.init = function () {
+    this.change(new homeState());
+  };
 
-  this.change = function(state) {
+  this.change = function (state) {
     currentState = state;
-  }
-}
+  };
+};
 
 // Home state
-const homeState = function(page) {
+const homeState = function (page) {
   document.querySelector('#heading').textContent = null;
   document.querySelector('#content').innerHTML = `
     <div class="jumbotron">
@@ -27,16 +27,16 @@ const homeState = function(page) {
       <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
   `;
-}
+};
 
 // About State
-const aboutState = function(page) {
+const aboutState = function (page) {
   document.querySelector('#heading').textContent = 'About Us';
   document.querySelector('#content').innerHTML = `<p>This is the about page</p>`;
-}
+};
 
 // Contact State
-const contactState = function(page) {
+const contactState = function (page) {
   document.querySelector('#heading').textContent = 'Contact Us';
   document.querySelector('#content').innerHTML = `
   <form>
@@ -51,7 +51,7 @@ const contactState = function(page) {
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
   `;
-}
+};
 
 // Instantiate page state
 const page = new PageState();
@@ -61,26 +61,26 @@ page.init();
 
 // UI Variables
 const home = document.querySelector('#home'),
-      about = document.querySelector('#about'),
-      conact = document.querySelector('#conact');
+  about = document.querySelector('#about'),
+  conact = document.querySelector('#conact');
 
 // Home event listener
 home.addEventListener('click', (e) => {
   e.preventDefault();
-  
-  page.change(new homeState);
-})
+
+  page.change(new homeState());
+});
 
 // About event listener
 about.addEventListener('click', (e) => {
   e.preventDefault();
 
-  page.change(new aboutState);
-})
+  page.change(new aboutState());
+});
 
 // Contact event listener
 contact.addEventListener('click', (e) => {
   e.preventDefault();
 
-  page.change(new contactState);
-})
+  page.change(new contactState());
+});

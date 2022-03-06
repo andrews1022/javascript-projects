@@ -4,7 +4,7 @@ const http = new EasyHTTP();
 const data = {
   name: 'Jone Doe',
   username: 'johndoe',
-  email: 'johndoe@gmail.com',
+  email: 'johndoe@gmail.com'
 };
 
 // --- UNCOMMENT EACH BLOCK TO SEE EFFECT ---

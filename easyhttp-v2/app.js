@@ -10,7 +10,7 @@ http
 const data = {
   name: 'Jone Doe',
   username: 'johndoe',
-  email: 'johndoe@gmail.com',
+  email: 'johndoe@gmail.com'
 };
 // Create User
 http

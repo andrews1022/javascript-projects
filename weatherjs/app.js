@@ -9,30 +9,30 @@ const ui = new UI();
 
 // Change location event
 document.getElementById('w-change-btn').addEventListener('click', () => {
-	const city = document.getElementById('city').value;
-	const state = document.getElementById('state').value;
+  const city = document.getElementById('city').value;
+  const state = document.getElementById('state').value;
 
-	// Change location
-	weather.changeLocation(city, state);
+  // Change location
+  weather.changeLocation(city, state);
 
-	// Set location in Local Storage
-	storage.setLocationData(city, state);
+  // Set location in Local Storage
+  storage.setLocationData(city, state);
 
-	// Get and display weather
-	getWeather();
+  // Get and display weather
+  getWeather();
 
-	// Close modal
-	$('#locModal').modal('hide');
+  // Close modal
+  $('#locModal').modal('hide');
 });
 
 function getWeather() {
-	// Treat this as a Promise
-	weather
-		.getWeather()
-		.then((results) => {
-			ui.paint(results);
-		})
-		.catch((err) => console.log(err));
+  // Treat this as a Promise
+  weather
+    .getWeather()
+    .then((results) => {
+      ui.paint(results);
+    })
+    .catch((err) => console.log(err));
 }
 
 // Get weather on DOM load

@@ -7,19 +7,19 @@ const random = document.querySelector('.random');
 
 // Function to call when selecting colors from picker
 const setGradient = () => {
-	body.style.background = `linear-gradient(to right, ${colorOne.value}, ${colorTwo.value})`;
-	cssOutput.textContent = `background-image: ${body.style.background};`;
+  body.style.background = `linear-gradient(to right, ${colorOne.value}, ${colorTwo.value})`;
+  cssOutput.textContent = `background-image: ${body.style.background};`;
 };
 
 // Function to generate random colors and set background gradient to them
 const setRandomColors = () => {
-	const randomColorOne = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
-	const randomColorTwo = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
+  const randomColorOne = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
+  const randomColorTwo = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
 
-	colorOne.value = randomColorOne;
-	colorTwo.value = randomColorTwo;
+  colorOne.value = randomColorOne;
+  colorTwo.value = randomColorTwo;
 
-	setGradient();
+  setGradient();
 };
 
 // Event listeners

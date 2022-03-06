@@ -24,7 +24,7 @@ class GitHub {
 
     return {
       profile, // Same as saying profile: profile --> no need for repetition
-      repos,
+      repos
     };
   }
 }

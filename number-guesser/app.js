@@ -26,7 +26,7 @@ minNum.textContent = min;
 maxNum.textContent = max;
 
 // Play again event listener - use event delegation
-game.addEventListener('mousedown', event => {
+game.addEventListener('mousedown', (event) => {
   if (event.target.className === 'play-again') {
     // Reload the page
     window.location.reload();

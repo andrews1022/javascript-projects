@@ -24,7 +24,7 @@ http.get('https://jsonplaceholder.typicode.com/posts/1', (error, post) => {
 // Create the data
 const data = {
   title: 'Custom Post',
-  body: 'This is a custom post',
+  body: 'This is a custom post'
 };
 
 // Create post

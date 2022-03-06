@@ -5,13 +5,13 @@ const themeButton = document.getElementById('theme');
 
 // Add event listener
 themeButton.addEventListener('click', () => {
-	// Grab all elements in the page
-	const allElements = document.getElementsByTagName('*');
+  // Grab all elements in the page
+  const allElements = document.getElementsByTagName('*');
 
-	// Loop through
-	for (element of allElements) {
-		element.classList.toggle('theme2');
-	}
+  // Loop through
+  for (element of allElements) {
+    element.classList.toggle('theme2');
+  }
 });
 
 ///////////////////////////////////////////////////////////////////////////
@@ -21,7 +21,7 @@ const themeButton = document.getElementById('theme');
 
 // Add event listener
 themeButton.addEventListener('click', () => {
-	document.body.classList.toggle('theme2');
+  document.body.classList.toggle('theme2');
 });
 
 // BREAKDOWN:
@@ -34,5 +34,5 @@ const body = document.getElementsByTagName('body')[0];
 const button = document.getElementById('theme');
 
 button.addEventListener('click', () => {
-	body.classList.toggle('theme2');
+  body.classList.toggle('theme2');
 });

@@ -1,30 +1,30 @@
 .heading {
-	text-align: center;
+  text-align: center;
 }
 
 .success,
 .error {
-	color: #ffffff;
-	padding: 5px;
-	margin: 5px 0 15px 0;
+  color: #ffffff;
+  padding: 5px;
+  margin: 5px 0 15px 0;
 }
 
 .success {
-	background: #008000;
+  background: #008000;
 }
 
 .error {
-	background: #ff0000;
+  background: #ff0000;
 }
 
 .delete {
-	text-decoration: none;
-	color: #df0000;
-	font-weight: bold;
-	transition: ease-in-out 200ms;
-	font-size: 20px;
+  text-decoration: none;
+  color: #df0000;
+  font-weight: bold;
+  transition: ease-in-out 200ms;
+  font-size: 20px;
 }
 
 .delete:hover {
-	color: #ff0000;
+  color: #ff0000;
 }
